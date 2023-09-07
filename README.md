@@ -1,2 +1,3 @@
-# zao_sdk_app_serial_controller
-pc application
+# zao_sdk_controller_app
+
+This is a privat application to controlling ZAO sdk Car using windows app 

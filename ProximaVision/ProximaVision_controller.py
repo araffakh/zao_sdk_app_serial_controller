@@ -15,7 +15,7 @@ class Zao_sdk_App(customtkinter.CTk):
         self.zaosdkcontroller = ZaoSDKController()
         t1= threading.Thread()
         
-        self.title("Zao sdk Controller App - BETA")
+        self.title("ProximaVision Controller")
         self.geometry("600x400")
         self.resizable(width=False, height=False)
 

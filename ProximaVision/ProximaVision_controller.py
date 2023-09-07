@@ -56,12 +56,12 @@ class Zao_sdk_App(customtkinter.CTk):
         right_bottom=customtkinter.CTkFrame(self,width=400,height=50,border_width=1)
         right_bottom.grid(row=2, column=1, padx=10, pady=10,sticky="nsew")
       
-        my_image = customtkinter.CTkImage(light_image=Image.open(f"{os.path.dirname(__file__)}\logo.png"),
-                                  dark_image=Image.open(f"{os.path.dirname(__file__)}\logo.png"),
-                                  size=(100, 100))
+        # my_image = customtkinter.CTkImage(light_image=Image.open(f"{os.path.dirname(__file__)}\logo.png"),
+        #                           dark_image=Image.open(f"{os.path.dirname(__file__)}\logo.png"),
+        #                           size=(100, 100))
         
-        # my_image = customtkinter.CTkImage(light_image=Image.open(r"C:\\Users\\araff\Desktop\\zao_controller_app\\zao_sdk_controller_app-main\\logo.png"),
-        #                           dark_image=Image.open(r'C:\\Users\\araff\Desktop\\zao_controller_app\\zao_sdk_controller_app-main\\logo.png'),
+        # my_image = customtkinter.CTkImage(light_image=Image.open(r"C:\sers\\user\Desktop\zao_sdk_Development\zao_sdk_app_serial_controller\proximaVision\logo.png\logo.png"),
+        #                           dark_image=Image.open(r'C:\sers\user\\Desktop\zao_sdk_Development\zao_sdk_app_serial_controller\proximaVision\logo.png\logo.png'),
         #                           size=(70, 70))
         
         # path=self.resource_path("logo.png")

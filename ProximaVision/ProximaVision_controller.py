@@ -115,7 +115,7 @@ class Zao_sdk_App(customtkinter.CTk):
         self.BT_connect=customtkinter.CTkButton(Left,text="connect",command=  lambda: self.items_selected(True))
         self.BT_connect.grid(row=7, column=0, padx=0, pady=2, sticky="n" )
         
-        self.BT_connect_exit=customtkinter.CTkButton(Left,text="Exit",command=self.destroy)
+        self.BT_connect_exit=customtkinter.CTkButton(Left,text="Exit",command=self.quit)
         self.BT_connect_exit.grid(row=8, column=0, padx=0, pady=10, sticky="n" )
 
         label_Joy=customtkinter.CTkLabel(right_top,text='Joystick: ')

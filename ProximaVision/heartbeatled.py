@@ -71,28 +71,28 @@ class HeartbeatLed(Thread):
         for i in range(2):
             if led=='RX':
                 self.led_status(False,True,True)
-                print(f"the RX is","HIGH")            
+                # print(f"the RX is","HIGH")            
                 time.sleep(waitspan)    
                 self.led_status(False,True,False)
-                print(f"the RX is","LOW")   
+                # print(f"the RX is","LOW")   
                 time.sleep(waitspan)
             else:
                 self.led_status(True,False,True)
-                print(f"the TX is","HIGH")            
+                # print(f"the TX is","HIGH")            
                 time.sleep(waitspan)    
                 self.led_status(True,False,False)
-                print(f"the TX is","LOW")   
+                # print(f"the TX is","LOW")   
                 time.sleep(waitspan)
             
 
     def led_status(self,tx,rx,status):
         if tx==True:
             self.led_tx=status
-            print(f"the {self.led_tx} is",status)
+            # print(f"the {self.led_tx} is",status)
             
         elif rx==True:
             self.led_rx=status
-            print(f"the { self.led_rx} is",status)
+            # print(f"the { self.led_rx} is",status)
             
         elif (tx==True)and (rx==True):
             self.led_tx=status

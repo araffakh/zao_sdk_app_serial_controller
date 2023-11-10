@@ -5,15 +5,16 @@ import os
 from base_main import * 
 import sys
 import serial.tools.list_ports
+import psutil
 
-APP_TITLE = "ProximaVision Controller"
+APP_TITLE = "TNO.exe"
 
 #APP parameters
 WIDTH =600
 HIGHT =400
 
 #Logo 
-LOGO_IMG= "logo.png"
+LOGO_IMG= "tno.jpg"
 LOGO_WIDTH=100
 LOGO_HIGHT=100
 ports = serial.tools.list_ports.comports()
@@ -80,7 +81,7 @@ class zao_app_controoler(customtkinter.CTk):
         label_logo.grid(row=0, column=0, padx=(WIDTH-LOGO_WIDTH)/2, pady=0, sticky="ws" )
         
         #Slogan Frame
-        label_slogan=customtkinter.CTkLabel(Top_frame,text='Proximavision Controller',font=self.font_H1, text_color=self.text_color_defualt)
+        label_slogan=customtkinter.CTkLabel(Top_frame,text='Demo TNO Controller',font=self.font_H1, text_color=self.text_color_defualt)
         label_slogan.grid(row=2, column=0, padx=0, pady=0, sticky="NS" )
         
         
@@ -152,7 +153,7 @@ class zao_app_controoler(customtkinter.CTk):
         self.BT_connect_exit.grid(row=4, column=0,  pady=10 )
              
         
-        txt='Zao SDK Controller App for JetRacer ROS(ProximaVision) - V1.1.0.0\n Khaldon Araffa 2023'
+        txt='Zao SDK Controller App for JetRacer ROS V1.1.0.0\n Khaldon Araffa 2023'
     #Bottom_frame
         label_title_BF=customtkinter.CTkLabel(bottom_frame,text=txt,font=self.font_defult, text_color=self.text_color_defualt)
         paddx=WIDTH/2-len(txt)-50
@@ -207,12 +208,11 @@ class zao_app_controoler(customtkinter.CTk):
             # self.start_new_thread('False',self.selected_port)
             for proc in psutil.process_iter():
             # check whether the process name matches
-                
-                if proc.name() ==  APP_TITLE:
+                if proc.name() == APP_TITLE:
                     proc.kill()
             # raise Exception('Stop now!')
         
-            # self.destroy()   
+            self.destroy()   
             # self.zaosdkcontroller.close()
             # sys.exit()
      
@@ -300,7 +300,7 @@ class zao_app_controoler(customtkinter.CTk):
                     self.label_rx_value.configure(fg_color="red")
 
             else:
-                self.label_Joy_value.configure(text="Disconnected", fg_color="red") 
+                self.label_joystick_type_value.configure(text="Disconnected", fg_color="red") 
             self.after(50, self.update_lables) # run itself again after 1000 ms
 
 #     #mapping range        
